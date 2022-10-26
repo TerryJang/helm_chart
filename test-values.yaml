@@ -5,10 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: 761406923746.dkr.ecr.ap-northeast-2.amazonaws.com/terry:latest
+  repository: 761406923746.dkr.ecr.ap-northeast-2.amazonaws.com/terry
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: latest
 
 imagePullSecrets: []
 nameOverride: ""
