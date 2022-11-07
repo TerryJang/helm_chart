@@ -36,15 +36,15 @@ spec:
           ports:
             - containerPort: 8000
           livenessProbe:
-            initialDelaySeconds: 200
+            initialDelaySeconds: 50
             httpGet:
               path: /
-              port: http
+              port: 80
           readinessProbe:
-            initialDelaySeconds: 200
+            initialDelaySeconds: 50
             httpGet:
               path: /
-              port: http
+              port: 80
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}

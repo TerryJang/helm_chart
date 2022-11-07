@@ -20,7 +20,7 @@ ingress:
       paths: []
   tls: []
 
-  resources: {}
-  nodeSelector: {}
-  tolerations: []
-  affinity: {}
+resources: {}
+nodeSelector: {}
+tolerations: []
+affinity: {}
