@@ -15,9 +15,12 @@ service:
 
 ingress:
   enabled: false
-  className: nginx
   hosts:
     - host: fast-api.test
-      paths:
-        - path: /
-          pathType: Prefix
+      paths: []
+  tls: []
+
+  resources: {}
+  nodeSelector: {}
+  tolerations: []
+  affinity: {}
