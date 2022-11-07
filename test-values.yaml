@@ -1,7 +1,3 @@
-# Default values for helm.
-# This is a YAML-formatted file.
-# Declare variables to be passed into your templates.
-
 replicaCount: 1
 
 image:
@@ -18,18 +14,15 @@ service:
   targetPort: 8000
 
 ingress:
-  enabled: false
+  enabled: true
   className: nginx
   hosts:
     - host: fast-api.test
       paths:
         - path: /
           pathType: Prefix
-
-resources:
-   limits:
-     cpu: 100m
-     memory: 128Mi
-   requests:
-     cpu: 100m
-     memory: 128Mi
+          backend:
+            service:
+              name: fast-api
+              port:
+                number: 80
