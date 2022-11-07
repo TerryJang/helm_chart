@@ -14,15 +14,10 @@ service:
   targetPort: 8000
 
 ingress:
-  enabled: true
+  enabled: false
   className: nginx
   hosts:
     - host: fast-api.test
       paths:
         - path: /
           pathType: Prefix
-          backend:
-            service:
-              name: fast-api
-              port:
-                number: 80
