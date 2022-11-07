@@ -39,12 +39,12 @@ spec:
             initialDelaySeconds: 50
             httpGet:
               path: /
-              port: 8000
+              port: 80
           readinessProbe:
             initialDelaySeconds: 50
             httpGet:
               path: /
-              port: 8000
+              port: 80
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
