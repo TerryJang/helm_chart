@@ -14,12 +14,10 @@ service:
   targetPort: 8000
 
 ingress:
-  enabled: false
+  enabled: true
   hosts:
     - host: fast-api.test
-      paths:
-        - path: /test
-
+      paths: []
   tls: []
 
 resources: {}
