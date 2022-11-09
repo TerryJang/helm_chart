@@ -17,7 +17,9 @@ ingress:
   enabled: false
   hosts:
     - host: fast-api.test
-      paths: []
+      paths:
+        - path: /test
+
   tls: []
 
 resources: {}
